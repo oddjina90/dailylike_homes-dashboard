@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>데라홈즈 시딩 성과 보고서 — 4~5월</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Apple SD Gothic Neo', 'Pretendard', 'Noto Sans KR', sans-serif;
+  background: #f5f5f3;
+  color: #1a1a18;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.page { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+.page-header { margin-bottom: 2rem; }
+.page-header h1 { font-size: 20px; font-weight: 600; color: #1a1a18; margin-bottom: 4px; }
+.page-header p { font-size: 13px; color: #6b6b67; }
+
+.tab-row { display: flex; gap: 8px; margin-bottom: 1.5rem; }
+.tab {
+  font-size: 13px; padding: 6px 18px;
+  border-radius: 20px; border: 1px solid #ccc;
+  cursor: pointer; background: transparent; color: #6b6b67;
+  font-family: inherit; transition: all 0.15s;
+}
+.tab.active { background: #1a1a18; color: #fff; border-color: #1a1a18; font-weight: 500; }
+
+.section-label {
+  font-size: 11px; font-weight: 600; color: #9b9b97;
+  text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 12px;
+}
+
+.metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 1.5rem; }
+.metric-card {
+  background: #fff; border: 1px solid #e0e0dc;
+  border-radius: 10px; padding: 14px 16px;
+}
+.metric-label { font-size: 11px; color: #9b9b97; margin-bottom: 5px; }
+.metric-value { font-size: 22px; font-weight: 600; color: #1a1a18; }
+.metric-sub { font-size: 11px; color: #b0b0aa; margin-top: 3px; }
+
+.chart-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.chart-box {
+  background: #fff; border: 1px solid #e0e0dc;
+  border-radius: 12px; padding: 1rem 1.25rem;
+}
+.chart-title { font-size: 13px; font-weight: 600; color: #1a1a18; margin-bottom: 10px; }
+.full-chart {
+  background: #fff; border: 1px solid #e0e0dc;
+  border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 14px;
+}
+
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; font-size: 11px; color: #6b6b67; }
+.legend span { display: flex; align-items: center; gap: 4px; }
+.legend-dot { width: 9px; height: 9px; border-radius: 2px; flex-shrink: 0; }
+
+/* 테이블 */
+.data-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.data-table thead tr { border-bottom: 1.5px solid #d0d0cc; }
+.data-table th {
+  font-size: 11px; color: #9b9b97; font-weight: 600;
+  text-align: left; padding: 8px 10px; white-space: nowrap;
+}
+.data-table td {
+  padding: 8px 10px; border-bottom: 1px solid #ebebE8;
+  color: #1a1a18; vertical-align: middle;
+}
+.data-table tbody tr:last-child td { border-bottom: none; }
+.data-table tbody tr:nth-child(odd) td { background: #fafaf8; }
+.data-table tbody tr:hover td { background: #f0f0ec; }
+
+.badge {
+  display: inline-block; font-size: 10px; padding: 2px 8px;
+  border-radius: 10px; font-weight: 600; white-space: nowrap;
+}
+.badge-new { background: #dbeafe; color: #1d4ed8; }
+.badge-good { background: #dcfce7; color: #166534; }
+.badge-mid { background: #fef9c3; color: #854d0e; }
+.badge-low { background: #fee2e2; color: #991b1b; }
+
+@media (max-width: 600px) {
+  .chart-row { grid-template-columns: 1fr; }
+  .metric-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="page-header">
+    <h1>데라홈즈 인플루언서 시딩 성과 보고서</h1>
+    <p>체험단 + 나노인플루언서 캠페인 · 2025년 4~5월</p>
+  </div>
+
+  <div class="tab-row">
+    <button class="tab active" onclick="showTab('exp', this)">체험단 시딩</button>
+    <button class="tab" onclick="showTab('nano', this)">나노인플루언서</button>
+    <button class="tab" onclick="showTab('insight', this)">광고 분석 · 전략</button>
+  </div>
+
+  <!-- ===== 체험단 섹션 ===== -->
+  <div id="tab-exp">
+    <p class="section-label">체험단 종합 성과 — 4~5월</p>
+    <div class="metric-grid">
+      <div class="metric-card"><div class="metric-label">총 조회수</div><div class="metric-value">17.8만</div><div class="metric-sub">7개 캠페인 합산</div></div>
+      <div class="metric-card"><div class="metric-label">총 댓글수</div><div class="metric-value">2,221</div><div class="metric-sub">평균 317/캠페인</div></div>
+      <div class="metric-card"><div class="metric-label">총 팔로워 증가</div><div class="metric-value">1,019</div><div class="metric-sub">7개 캠페인 합산</div></div>
+      <div class="metric-card"><div class="metric-label">총 매출 (집계완료)</div><div class="metric-value">3,377만원+</div><div class="metric-sub">6개 캠페인 기준</div></div>
+    </div>
+
+    <div class="chart-row">
+      <div class="chart-box">
+        <div class="chart-title">캠페인별 조회수</div>
+        <div style="position:relative;height:200px;"><canvas id="viewChart" role="img" aria-label="캠페인별 조회수 바 차트"></canvas></div>
+      </div>
+      <div class="chart-box">
+        <div class="chart-title">댓글 · 저장 · 공유</div>
+        <div class="legend">
+          <span><span class="legend-dot" style="background:#3b82f6"></span>댓글</span>
+          <span><span class="legend-dot" style="background:#22c55e"></span>저장</span>
+          <span><span class="legend-dot" style="background:#f97316"></span>공유</span>
+        </div>
+        <div style="position:relative;height:175px;"><canvas id="engChart" role="img" aria-label="댓글 저장 공유 그룹 바 차트"></canvas></div>
+      </div>
+    </div>
+
+    <div class="full-chart">
+      <div class="chart-title">제품 오픈 매출 추적 (원, 집계 완료 기준)</div>
+      <div class="legend">
+        <span><span class="legend-dot" style="background:#6366f1"></span>오픈 첫날</span>
+        <span><span class="legend-dot" style="background:#3b82f6"></span>오픈 1주</span>
+        <span><span class="legend-dot" style="background:#bfdbfe"></span>오픈 4주</span>
+        <span><span class="legend-dot" style="background:#fde68a"></span>오픈 3주 (컬러팜, 집계중)</span>
+      </div>
+      <div style="position:relative;height:230px;"><canvas id="revenueChart" role="img" aria-label="제품별 매출 누적 차트"></canvas></div>
+    </div>
+
+    <div class="full-chart">
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+        <div style="width:4px; height:18px; background:#6366f1; border-radius:2px;"></div>
+        <div class="chart-title" style="margin-bottom:0">신상 제품 — 오픈 매출 추적</div>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>제품명</th>
+            <th>오픈일</th>
+            <th style="text-align:right">오픈 첫날</th>
+            <th style="text-align:right">오픈 1주</th>
+            <th style="text-align:right">오픈 4주</th>
+            <th style="text-align:right">총 주문건수</th>
+            <th style="text-align:right">총 매출</th>
+            <th>랜딩</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>중장비 스니커즈</strong></td>
+            <td>3/31</td>
+            <td style="text-align:right">1,454,218원</td>
+            <td style="text-align:right">3,849,380원</td>
+            <td style="text-align:right">11,368,548원</td>
+            <td style="text-align:right">968건</td>
+            <td style="text-align:right"><span class="badge badge-good">15,325,861원</span></td>
+            <td>자사몰</td>
+          </tr>
+          <tr>
+            <td><strong>드로즈 팬티</strong></td>
+            <td>3/31</td>
+            <td style="text-align:right">247,282원</td>
+            <td style="text-align:right">1,015,840원</td>
+            <td style="text-align:right">2,312,693원</td>
+            <td style="text-align:right">297건</td>
+            <td style="text-align:right"><span class="badge badge-mid">3,867,566원</span></td>
+            <td>자사몰</td>
+          </tr>
+          <tr>
+            <td><strong>컬러팜 키즈프릴 삭스</strong></td>
+            <td>5/7</td>
+            <td style="text-align:right">1,736,820원</td>
+            <td style="text-align:right">5,567,892원</td>
+            <td style="text-align:right">11,697,677원 <span style="font-size:10px;color:#b0b0aa">★3주차</span></td>
+            <td style="text-align:right">978건</td>
+            <td style="text-align:right"><span class="badge badge-good">11,697,677원</span></td>
+            <td>자사몰</td>
+          </tr>
+          <tr>
+            <td><strong>올데이즈 반팔파자마</strong></td>
+            <td>5/20</td>
+            <td style="text-align:right">682,500원</td>
+            <td style="text-align:right; color:#b0b0aa">집계중</td>
+            <td style="text-align:right; color:#b0b0aa">—</td>
+            <td style="text-align:right">61건</td>
+            <td style="text-align:right">1,872,700원</td>
+            <td>29cm</td>
+          </tr>
+          <tr>
+            <td><strong>실켓 라이트삭스</strong></td>
+            <td>—</td>
+            <td style="text-align:right">0원</td>
+            <td style="text-align:right">56,700원</td>
+            <td style="text-align:right">198,300원</td>
+            <td style="text-align:right">56건</td>
+            <td style="text-align:right">1,004,727원</td>
+            <td>29cm</td>
+          </tr>
+          <tr style="background:#f0fdf4; font-weight:600;">
+            <td>합계</td>
+            <td></td>
+            <td style="text-align:right">4,120,820원</td>
+            <td style="text-align:right">10,489,812원+</td>
+            <td style="text-align:right">25,577,218원+</td>
+            <td style="text-align:right">2,360건+</td>
+            <td style="text-align:right"><span class="badge badge-good" style="font-size:12px">33,768,531원+</span></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="full-chart">
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+        <div style="width:4px; height:18px; background:#f97316; border-radius:2px;"></div>
+        <div class="chart-title" style="margin-bottom:0">기존 상품 — 시딩 전후 매출 비교</div>
+      </div>
+      <p style="font-size:11px; color:#9b9b97; margin-bottom:12px;">인지도·팔로워 견인 목적 시딩 · 즉각 매출보다 누적 효과 추적</p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>제품명</th>
+            <th>시딩 전<br><span style="font-weight:400">14일 기준</span></th>
+            <th>시딩 효과 기간<br><span style="font-weight:400">(업로드+이벤트)</span></th>
+            <th>시딩 후</th>
+            <th style="text-align:right">시딩 전 매출</th>
+            <th style="text-align:right">시딩 기간 매출</th>
+            <th style="text-align:right">시딩 전 일평균</th>
+            <th style="text-align:right">시딩 기간 일평균</th>
+            <th style="text-align:right">일평균 증감</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>원마일 파자마팬츠</strong></td>
+            <td style="color:#9b9b97; font-size:11px">4/14 ~ 4/27</td>
+            <td style="color:#9b9b97; font-size:11px">4/28 ~ 5/13</td>
+            <td style="color:#9b9b97; font-size:11px">5/14 ~ 5/27<br><span style="color:#b0b0aa">52,272원</span></td>
+            <td style="text-align:right">31,077원</td>
+            <td style="text-align:right">39,600원</td>
+            <td style="text-align:right">2,220원</td>
+            <td style="text-align:right">2,475원</td>
+            <td style="text-align:right"><span class="badge badge-good">▲ +11%</span></td>
+          </tr>
+          <tr>
+            <td><strong>페이크삭스 두들링</strong></td>
+            <td style="color:#9b9b97; font-size:11px">5/8 ~ 5/21</td>
+            <td style="color:#9b9b97; font-size:11px">5/22 ~ 6/7<br><span style="color:#b0b0aa">진행중 (5일)</span></td>
+            <td style="color:#9b9b97; font-size:11px">6/8 ~ 6/21<br><span style="color:#b0b0aa">집계 전</span></td>
+            <td style="text-align:right">676,217원</td>
+            <td style="text-align:right">481,382원 <span style="font-size:10px;color:#b0b0aa">(5일)</span></td>
+            <td style="text-align:right">48,301원</td>
+            <td style="text-align:right"><strong>96,276원</strong></td>
+            <td style="text-align:right"><span class="badge badge-good">▲ +99%</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:11px; color:#b0b0aa; margin-top:10px;">※ 페이크삭스 두들링은 5/26 기준 시딩 효과 기간 5일치 데이터 · 캠페인 종료(6/7) 후 재집계 필요</p>
+    </div>
+
+    <div class="full-chart">
+      <div class="chart-title">캠페인별 참여율 요약</div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>제품명</th><th>시딩</th><th>조회수</th><th>댓글</th><th>저장</th><th>공유</th><th>팔로워↑</th><th>신상</th><th>랜딩</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>중장비 스니커즈</td><td>30</td><td>3.4만</td><td>509</td><td>95</td><td>150</td><td>273</td><td><span class="badge badge-new">신상</span></td><td>자사몰</td></tr>
+          <tr><td>드로즈 팬티</td><td>30</td><td>2.2만</td><td>292</td><td>53</td><td>70</td><td>118</td><td><span class="badge badge-new">신상</span></td><td>자사몰</td></tr>
+          <tr><td>원마일 파자마팬츠</td><td>15</td><td>1.4만</td><td>207</td><td>38</td><td>87</td><td>91</td><td>—</td><td>자사몰</td></tr>
+          <tr><td>컬러팜 키즈프릴 삭스</td><td>50</td><td>3.1만</td><td>560</td><td>119</td><td>113</td><td>247</td><td><span class="badge badge-new">신상</span></td><td>자사몰</td></tr>
+          <tr><td>올데이즈 반팔파자마</td><td>40</td><td>1.8만</td><td>276</td><td>90</td><td>231</td><td>191</td><td><span class="badge badge-new">신상</span></td><td>29cm</td></tr>
+          <tr><td>실켓 라이트삭스</td><td>20</td><td>2만</td><td>61</td><td>22</td><td>15</td><td>10</td><td><span class="badge badge-new">신상</span></td><td>29cm</td></tr>
+          <tr><td>페이크삭스 두들링</td><td>50</td><td>1.9만</td><td>316</td><td>53</td><td>99</td><td>89</td><td>—</td><td>자사몰</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ===== 나노인플루언서 섹션 ===== -->
+  <div id="tab-nano" style="display:none;">
+    <p class="section-label">나노인플루언서 캠페인 — 5월</p>
+    <div class="metric-grid">
+      <div class="metric-card"><div class="metric-label">총 캠페인 매출</div><div class="metric-value">416만원+</div><div class="metric-sub">3개 캠페인 합산</div></div>
+      <div class="metric-card"><div class="metric-label">총 유가 비용</div><div class="metric-value">338만원</div><div class="metric-sub">ROI 추적 중</div></div>
+      <div class="metric-card"><div class="metric-label">유가/무가 인원</div><div class="metric-value">22 / 72명</div><div class="metric-sub">총 94명 참여</div></div>
+      <div class="metric-card"><div class="metric-label">최저 CPC</div><div class="metric-value">695원</div><div class="metric-sub">u.ujin_home</div></div>
+    </div>
+
+
+    <div class="full-chart">
+      <div class="chart-title">캠페인별 매출 상세 수치</div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>캠페인 (제품명)</th>
+            <th>캠페인 기간</th>
+            <th>오픈일</th>
+            <th style="text-align:right">오픈 첫날</th>
+            <th style="text-align:right">오픈 1주</th>
+            <th style="text-align:right">오픈 4주</th>
+            <th style="text-align:right">총 주문건수</th>
+            <th style="text-align:right">총 매출</th>
+            <th style="text-align:right">유가 비용</th>
+            <th>랜딩</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>올데이즈 팔레트 삭스</strong></td>
+            <td>5/1 ~ 5/11</td>
+            <td>4/24</td>
+            <td style="text-align:right">18,900원</td>
+            <td style="text-align:right">132,300원</td>
+            <td style="text-align:right">959,300원</td>
+            <td style="text-align:right">79건</td>
+            <td style="text-align:right"><span class="badge badge-mid">1,192,800원</span></td>
+            <td style="text-align:right">1,280,000원</td>
+            <td>29cm</td>
+          </tr>
+          <tr>
+            <td><strong>실켓 라이트 삭스</strong></td>
+            <td>5/1 ~ 5/11</td>
+            <td>4/24</td>
+            <td style="text-align:right">0원</td>
+            <td style="text-align:right">56,700원</td>
+            <td style="text-align:right">687,027원</td>
+            <td style="text-align:right">61건</td>
+            <td style="text-align:right"><span class="badge badge-mid">1,094,427원</span></td>
+            <td style="text-align:right">450,000원</td>
+            <td>29cm</td>
+          </tr>
+          <tr>
+            <td><strong>올데이즈 반팔 파자마</strong></td>
+            <td>5/19 ~ 진행중</td>
+            <td>5/18</td>
+            <td style="text-align:right">682,500원</td>
+            <td style="text-align:right">1,872,700원</td>
+            <td style="text-align:right; color:#b0b0aa">집계중</td>
+            <td style="text-align:right">61건</td>
+            <td style="text-align:right"><span class="badge badge-good">1,872,700원+</span></td>
+            <td style="text-align:right">1,650,000원</td>
+            <td>29cm</td>
+          </tr>
+          <tr style="background:#f0fdf4; font-weight:600;">
+            <td>합계</td>
+            <td colspan="2"></td>
+            <td style="text-align:right">701,400원</td>
+            <td style="text-align:right">2,061,700원</td>
+            <td style="text-align:right">1,646,327원+</td>
+            <td style="text-align:right">201건+</td>
+            <td style="text-align:right"><span class="badge badge-good" style="font-size:12px">4,159,927원+</span></td>
+            <td style="text-align:right">3,380,000원</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-row">
+      <div class="chart-box">
+        <div class="chart-title">캠페인별 유가/무가 구성</div>
+        <div class="legend">
+          <span><span class="legend-dot" style="background:#6366f1"></span>유가</span>
+          <span><span class="legend-dot" style="background:#bfdbfe"></span>무가</span>
+        </div>
+        <div style="position:relative;height:200px;"><canvas id="paidChart" role="img" aria-label="캠페인별 유가 무가 인원 바 차트"></canvas></div>
+      </div>
+      <div class="chart-box">
+        <div class="chart-title">캠페인별 유가 비용 배분</div>
+        <div style="position:relative;height:200px;"><canvas id="costChart" role="img" aria-label="캠페인별 비용 도넛 차트"></canvas></div>
+      </div>
+    </div>
+
+    <div class="full-chart">
+      <div class="chart-title">PA광고 집행 인플루언서 — CPC 비교 (원)</div>
+      <div style="position:relative;height:280px;"><canvas id="cpcChart" role="img" aria-label="인플루언서별 CPC 비교 가로 바 차트"></canvas></div>
+    </div>
+
+    <div class="full-chart">
+      <div class="chart-title">유가 인플루언서 상세 현황</div>
+      <table class="data-table">
+        <thead>
+          <tr><th>인플루언서</th><th>캠페인</th><th>팔로워</th><th>비용</th><th>유형</th><th>조회수</th><th>댓글</th><th>PA노출</th><th>PA유입</th><th>CPC</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>zooimood.kr</td><td>팔레트삭스</td><td>2,623</td><td>100,000</td><td>릴스</td><td>2만</td><td>5</td><td>87</td><td>1</td><td>1,043원</td></tr>
+          <tr><td>dajeome</td><td>팔레트삭스</td><td>2,662</td><td>100,000</td><td>릴스</td><td>1,456</td><td>4</td><td>1,628</td><td>11</td><td><span class="badge badge-mid">1,964원</span></td></tr>
+          <tr><td>soowow.h</td><td>팔레트삭스</td><td>2,228</td><td>300,000</td><td>릴스</td><td>1,476</td><td>10</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>md.room_</td><td>팔레트삭스</td><td>1.2만</td><td>250,000</td><td>릴스</td><td>2,764</td><td>58</td><td>748</td><td>5</td><td>2,113원</td></tr>
+          <tr><td>soonmoon_</td><td>팔레트삭스</td><td>4,350</td><td>100,000</td><td>릴스</td><td>5,178</td><td>12</td><td>603</td><td>4</td><td>1,514원</td></tr>
+          <tr><td>jiyangpark</td><td>팔레트삭스</td><td>2,689</td><td>330,000</td><td>릴스</td><td>2,681</td><td>12</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>heeyohaus</td><td>라이트삭스</td><td>8,591</td><td>300,000</td><td>릴스</td><td>3,978</td><td>1</td><td>456</td><td>2</td><td>1,620원</td></tr>
+          <tr><td>lyun.7</td><td>라이트삭스</td><td>5,562</td><td>100,000</td><td>피드</td><td>3,110</td><td>35</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>hey.greeny</td><td>반팔파자마</td><td>1.2만</td><td>100,000</td><td>릴스</td><td>2,685</td><td>19</td><td>936</td><td>2</td><td>7,357원</td></tr>
+          <tr><td>_bomi.home</td><td>반팔파자마</td><td>2,269</td><td>100,000</td><td>릴스</td><td>1,583</td><td>73</td><td>357</td><td>1</td><td>4,116원</td></tr>
+          <tr><td>passi.kee</td><td>반팔파자마</td><td>3.2만</td><td>400,000</td><td>릴스</td><td>8,350</td><td>48</td><td>288</td><td>4</td><td><span class="badge badge-mid">1,470원</span></td></tr>
+          <tr style="background:#f0fdf4;"><td><strong>u.ujin_home</strong></td><td>반팔파자마</td><td>1만</td><td>100,000</td><td>릴스</td><td><strong>1.7만</strong></td><td>59</td><td>15,843</td><td><strong>149</strong></td><td><span class="badge badge-good">695원 ★</span></td></tr>
+          <tr><td>__home__i</td><td>반팔파자마</td><td>2.3만</td><td>250,000</td><td>피드</td><td>1만1천</td><td>36</td><td>417</td><td>2</td><td>2,992원</td></tr>
+          <tr><td>aout.cho</td><td>반팔파자마</td><td>2,146</td><td>100,000</td><td>릴스</td><td>1,281</td><td>39</td><td>—</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ===== 광고 분석 · 전략 섹션 ===== -->
+  <div id="tab-insight" style="display:none;">
+
+    <p class="section-label">자사몰 vs 29cm 랜딩 — 매출 직접 비교</p>
+    <div class="full-chart">
+      <div class="chart-title">랜딩 플랫폼별 1주차 매출 비교</div>
+      <div class="legend">
+        <span><span class="legend-dot" style="background:#6366f1"></span>자사몰 랜딩</span>
+        <span><span class="legend-dot" style="background:#f97316"></span>29cm 랜딩</span>
+      </div>
+      <div style="position:relative;height:240px;"><canvas id="landingChart" role="img" aria-label="자사몰 vs 29cm 랜딩 1주차 매출 비교 차트"></canvas></div>
+    </div>
+
+    <div class="full-chart">
+      <div class="chart-title">랜딩 플랫폼별 상세 비교</div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>제품</th>
+            <th>랜딩</th>
+            <th>시딩</th>
+            <th style="text-align:right">1주차 매출</th>
+            <th style="text-align:right">4주 매출</th>
+            <th>전환 추적</th>
+            <th>리타겟팅</th>
+            <th>고객DB</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>중장비 스니커즈</strong></td>
+            <td><span class="badge badge-good">자사몰</span></td>
+            <td>30명</td>
+            <td style="text-align:right; color:#166534; font-weight:600;">3,849,380원</td>
+            <td style="text-align:right">15,325,861원</td>
+            <td style="color:#166534;">✓ 가능</td>
+            <td style="color:#166534;">✓ 가능</td>
+            <td style="color:#166534;">✓ 축적</td>
+          </tr>
+          <tr>
+            <td><strong>컬러팜 키즈프릴 삭스</strong></td>
+            <td><span class="badge badge-good">자사몰</span></td>
+            <td>50명</td>
+            <td style="text-align:right; color:#166534; font-weight:600;">5,567,892원</td>
+            <td style="text-align:right">11,697,677원</td>
+            <td style="color:#166534;">✓ 가능</td>
+            <td style="color:#166534;">✓ 가능</td>
+            <td style="color:#166534;">✓ 축적</td>
+          </tr>
+          <tr>
+            <td><strong>드로즈 팬티</strong></td>
+            <td><span class="badge badge-good">자사몰</span></td>
+            <td>30명</td>
+            <td style="text-align:right; color:#166534; font-weight:600;">1,015,840원</td>
+            <td style="text-align:right">3,867,566원</td>
+            <td style="color:#166534;">✓ 가능</td>
+            <td style="color:#166534;">✓ 가능</td>
+            <td style="color:#166534;">✓ 축적</td>
+          </tr>
+          <tr style="background:#fff1f2;">
+            <td><strong>올데이즈 반팔파자마</strong></td>
+            <td><span class="badge badge-low">29cm</span></td>
+            <td>40명</td>
+            <td style="text-align:right; color:#991b1b; font-weight:600;">1,872,700원</td>
+            <td style="text-align:right; color:#b0b0aa">집계중</td>
+            <td style="color:#991b1b;">✗ 불가</td>
+            <td style="color:#991b1b;">✗ 불가</td>
+            <td style="color:#991b1b;">✗ 없음</td>
+          </tr>
+          <tr style="background:#fff1f2;">
+            <td>
+              <strong>실켓 라이트삭스</strong>
+              <div style="font-size:10px; color:#9b9b97; margin-top:3px; line-height:1.5;">오픈 4/24 · 매출 부진 → 5/1~5/11<br>29cm 좋아요 이벤트 캠페인 진행</div>
+            </td>
+            <td><span class="badge badge-low">29cm</span></td>
+            <td>20명</td>
+            <td style="text-align:right; color:#991b1b; font-weight:600;">56,700원</td>
+            <td style="text-align:right">1,004,727원</td>
+            <td style="color:#991b1b;">✗ 불가</td>
+            <td style="color:#991b1b;">✗ 불가</td>
+            <td style="color:#991b1b;">✗ 없음</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:11px; color:#9b9b97; margin-top:10px;">※ 자사몰 랜딩 1주차 평균: 3,477,704원 / 29cm 랜딩 1주차 평균: 964,700원 → <strong style="color:#991b1b;">약 3.6배 차이</strong></p>
+    </div>
+
+    <p class="section-label">체험단 광고 — 팔로워 획득 효율 분석</p>
+    <div class="metric-grid">
+      <div class="metric-card"><div class="metric-label">총 광고비</div><div class="metric-value">103만원</div><div class="metric-sub">7개 캠페인 합산</div></div>
+      <div class="metric-card"><div class="metric-label">총 광고 유입</div><div class="metric-value">5,749명</div><div class="metric-sub">자사몰 랜딩</div></div>
+      <div class="metric-card"><div class="metric-label">팔로워 1명당 평균</div><div class="metric-value">1,012원</div><div class="metric-sub">전체 평균</div></div>
+      <div class="metric-card"><div class="metric-label">최고 전환율</div><div class="metric-value">32.4%</div><div class="metric-sub">올데이즈 반팔파자마</div></div>
+    </div>
+
+    <div class="chart-row">
+      <div class="chart-box">
+        <div class="chart-title">팔로워 1명당 광고비 (원)</div>
+        <div style="position:relative;height:220px;"><canvas id="cpfChart" role="img" aria-label="캠페인별 팔로워 1명당 광고비 비교 차트"></canvas></div>
+      </div>
+      <div class="chart-box">
+        <div class="chart-title">광고 유입 → 팔로워 전환율 (%)</div>
+        <div style="position:relative;height:220px;"><canvas id="fcrChart" role="img" aria-label="캠페인별 유입 대비 팔로워 전환율 차트"></canvas></div>
+      </div>
+    </div>
+
+    <div class="full-chart">
+      <div class="chart-title">캠페인별 광고 효율 상세</div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>제품명</th>
+            <th style="text-align:right">광고비</th>
+            <th style="text-align:right">광고 유입</th>
+            <th style="text-align:right">CPC</th>
+            <th style="text-align:right">팔로워↑</th>
+            <th style="text-align:right">유입→팔로워</th>
+            <th style="text-align:right">팔로워 1명당</th>
+            <th>평가</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f0fdf4;">
+            <td><strong>올데이즈 반팔파자마</strong></td>
+            <td style="text-align:right">141,024원</td>
+            <td style="text-align:right">590명</td>
+            <td style="text-align:right">239원</td>
+            <td style="text-align:right">191명</td>
+            <td style="text-align:right"><strong>32.4%</strong></td>
+            <td style="text-align:right">738원</td>
+            <td><span class="badge badge-good">최우수</span></td>
+          </tr>
+          <tr style="background:#f0fdf4;">
+            <td><strong>컬러팜 키즈프릴 삭스</strong></td>
+            <td style="text-align:right">184,136원</td>
+            <td style="text-align:right">1,462명</td>
+            <td style="text-align:right">126원</td>
+            <td style="text-align:right">247명</td>
+            <td style="text-align:right">16.9%</td>
+            <td style="text-align:right">745원</td>
+            <td><span class="badge badge-good">우수</span></td>
+          </tr>
+          <tr>
+            <td><strong>중장비 스니커즈</strong></td>
+            <td style="text-align:right">234,658원</td>
+            <td style="text-align:right">1,425명</td>
+            <td style="text-align:right">165원</td>
+            <td style="text-align:right">273명</td>
+            <td style="text-align:right">19.2%</td>
+            <td style="text-align:right">860원</td>
+            <td><span class="badge badge-good">우수</span></td>
+          </tr>
+          <tr>
+            <td><strong>페이크삭스 두들링</strong></td>
+            <td style="text-align:right">92,054원</td>
+            <td style="text-align:right">512명</td>
+            <td style="text-align:right">180원</td>
+            <td style="text-align:right">89명</td>
+            <td style="text-align:right">17.4%</td>
+            <td style="text-align:right">1,034원</td>
+            <td><span class="badge badge-mid">보통</span></td>
+          </tr>
+          <tr>
+            <td><strong>드로즈 팬티</strong></td>
+            <td style="text-align:right">137,117원</td>
+            <td style="text-align:right">577명</td>
+            <td style="text-align:right">238원</td>
+            <td style="text-align:right">118명</td>
+            <td style="text-align:right">20.5%</td>
+            <td style="text-align:right">1,162원</td>
+            <td><span class="badge badge-mid">보통</span></td>
+          </tr>
+          <tr>
+            <td><strong>원마일 파자마팬츠</strong></td>
+            <td style="text-align:right">154,798원</td>
+            <td style="text-align:right">519명</td>
+            <td style="text-align:right">298원</td>
+            <td style="text-align:right">91명</td>
+            <td style="text-align:right">17.5%</td>
+            <td style="text-align:right">1,701원</td>
+            <td><span class="badge badge-mid">저조</span></td>
+          </tr>
+          <tr style="background:#fff1f2;">
+            <td>
+              <strong>실켓 라이트삭스</strong>
+              <div style="font-size:10px; color:#9b9b97; margin-top:3px; line-height:1.5;">오픈 4/24 · 매출 부진으로<br>5/1~5/11 좋아요 이벤트 캠페인</div>
+            </td>
+            <td style="text-align:right">86,978원</td>
+            <td style="text-align:right">664명</td>
+            <td style="text-align:right">131원</td>
+            <td style="text-align:right">10명</td>
+            <td style="text-align:right; color:#991b1b;"><strong>1.5%</strong></td>
+            <td style="text-align:right; color:#991b1b;"><strong>8,698원</strong></td>
+            <td><span class="badge badge-low">재검토 필요</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:11px; color:#9b9b97; margin-top:10px;">※ 실켓 라이트삭스: 664명 유입 중 팔로워 전환 10명(1.5%) — 평균 대비 팔로워 획득 비용 8.6배 초과</p>
+    </div>
+
+    <p class="section-label">실켓 라이트삭스 — 시딩 효과 타임라인 (29cm 일별 매출)</p>
+    <div class="full-chart">
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+        <div style="width:4px; height:18px; background:#6366f1; border-radius:2px;"></div>
+        <div class="chart-title" style="margin-bottom:0">일별 판매 추이 — 이벤트별 매출 변화</div>
+      </div>
+      <p style="font-size:11px; color:#9b9b97; margin-bottom:12px;">오픈 4/24 · 데이터 기준 5/1~5/26</p>
+      <div style="position:relative;height:260px;"><canvas id="silketChart" role="img" aria-label="실켓 라이트삭스 일별 매출 타임라인 차트"></canvas></div>
+    </div>
+
+    <div class="full-chart">
+      <div class="chart-title">이벤트별 효과 요약</div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>기간</th>
+            <th>이벤트</th>
+            <th style="text-align:right">기간 매출</th>
+            <th style="text-align:right">일평균</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="color:#9b9b97; font-size:11px">5/1 ~ 5/12</td>
+            <td>이벤트 없음 (오픈 후 방치)</td>
+            <td style="text-align:right; color:#991b1b;">33,000원</td>
+            <td style="text-align:right; color:#991b1b;">2,750원</td>
+            <td style="font-size:11px; color:#9b9b97;">2건 판매</td>
+          </tr>
+          <tr style="background:#eff6ff;">
+            <td style="color:#1d4ed8; font-size:11px; font-weight:600">5/13 ~ 5/20</td>
+            <td><strong>인스타 좋아요 이벤트</strong> (체험단 시딩)<br><span style="font-size:10px; color:#9b9b97;">5/15 29체험단 후기 업로드 시작</span></td>
+            <td style="text-align:right; color:#166534; font-weight:600;">579,300원</td>
+            <td style="text-align:right; color:#166534; font-weight:600;">72,413원</td>
+            <td style="font-size:11px; color:#1d4ed8;">일평균 26배↑</td>
+          </tr>
+          <tr style="background:#f0fdf4;">
+            <td style="color:#166534; font-size:11px; font-weight:600">5/18 ~</td>
+            <td><strong>29cm 월간이구홀 + 쇼케이스 오픈</strong><br><span style="font-size:10px; color:#9b9b97;">플랫폼 이벤트 구좌 진입</span></td>
+            <td style="text-align:right; color:#166534; font-weight:600;">—</td>
+            <td style="text-align:right">—</td>
+            <td style="font-size:11px; color:#166534;">5/20~23 연속 8~9건/일</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="background:#eff6ff; border-left:3px solid #3b82f6; border-radius:0 8px 8px 0; padding:10px 14px; margin-top:12px; font-size:12px; color:#1d4ed8; line-height:1.7;">
+        <strong>인사이트</strong> — 시딩(좋아요 이벤트) → 후기 누적 → 플랫폼 이벤트 구좌 순서가 맞아야 효과가 납니다. 순서 없이 광고비만 태웠다면 5/1~5/12처럼 일평균 2,750원에 그쳤을 것으로 판단. 대형 플랫폼도 조건이 갖춰진 후에 광고비를 집중해야 ROI가 나올 것으로 생각됩니다.
+      </div>
+    </div>
+
+    <p class="section-label">핵심 인사이트 — 다음 캠페인 방향</p>
+    <div style="margin-bottom:14px;">
+      <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:12px; padding:1rem 1.25rem;">
+        <p style="font-size:12px; font-weight:600; color:#166534; margin-bottom:8px;">✓ 유지 · 강화할 패턴</p>
+        <p style="font-size:12px; color:#15803d; line-height:1.7;">반팔파자마·컬러팜 삭스 패턴 복제 — 유입→팔로워 전환율 17~32%, 팔로워 1명당 700~750원대. 신상 출시 시 자사몰 랜딩 유지로 데이터·DB 축적 지속.</p>
+      </div>
+    </div>
+
+    <div style="background:#eff6ff; border:1px solid #bfdbfe; border-left:4px solid #3b82f6; border-radius:0 12px 12px 0; padding:1rem 1.25rem; margin-bottom:14px;">
+      <p style="font-size:13px; font-weight:600; color:#1e40af; margin-bottom:6px;">자사몰 우선 전략의 근거 — 데이터 요약</p>
+      <p style="font-size:12px; color:#1d4ed8; line-height:1.8;">
+        자사몰 랜딩 1주차 평균 <strong>3,477,704원</strong> vs 29cm 랜딩 1주차 평균 <strong>964,700원</strong> → <strong>3.6배 차이</strong><br>
+        자사몰: 메타픽셀 작동 → 전환 추적 · 리타겟팅 · 고객DB 축적 모두 가능<br>
+        29cm: 픽셀 없음 → 광고비 써도 누가 샀는지 모르고, 고객은 29cm 소유
+      </p>
+    </div>
+
+    <div style="background:#1a1a18; border-radius:12px; padding:1.5rem 1.75rem; margin-bottom:14px;">
+      <p style="font-size:11px; font-weight:600; color:#9b9b97; letter-spacing:.07em; text-transform:uppercase; margin-bottom:12px;">결론 및 방향</p>
+      <p style="font-size:15px; font-weight:600; color:#fff; margin-bottom:10px; line-height:1.6;">
+        광고는 자사몰로 집중한다
+      </p>
+      <p style="font-size:13px; color:#d0d0cc; line-height:1.9; margin-bottom:16px;">
+        인플루언서 시딩의 아웃풋을 자사몰 양질의 콘텐츠 생성과 매출 견인에 집중합니다.<br>
+        메타픽셀이 작동하는 자사몰 랜딩에서 데이터를 쌓고, 고객 DB를 확보하며, 광고비가 스스로 최적화되는 선순환 구조를 만들어 나갑니다.
+      </p>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px;">
+        <div style="background:#2a2a28; border-radius:8px; padding:12px 14px;">
+          <p style="font-size:11px; color:#9b9b97; margin-bottom:5px;">단계 1</p>
+          <p style="font-size:12px; font-weight:600; color:#fff; margin-bottom:4px;">시딩 → 자사몰</p>
+          <p style="font-size:11px; color:#9b9b97; line-height:1.5;">신상 출시 시 자사몰 랜딩 유지. 픽셀 데이터·후기·DB 축적.</p>
+        </div>
+        <div style="background:#2a2a28; border-radius:8px; padding:12px 14px;">
+          <p style="font-size:11px; color:#9b9b97; margin-bottom:5px;">단계 2</p>
+          <p style="font-size:12px; font-weight:600; color:#fff; margin-bottom:4px;">자사몰 광고 집행</p>
+          <p style="font-size:11px; color:#9b9b97; line-height:1.5;">픽셀 학습 기반 유사타겟 확장. 이탈 고객 리타겟팅.</p>
+        </div>
+        <div style="background:#2a2a28; border-radius:8px; padding:12px 14px;">
+          <p style="font-size:11px; color:#9b9b97; margin-bottom:5px;">단계 3 (조건 충족 후)</p>
+          <p style="font-size:12px; font-weight:600; color:#fff; margin-bottom:4px;">29cm 광고 집행</p>
+          <p style="font-size:11px; color:#9b9b97; line-height:1.5;">후기 누적·기획전 구좌 확보 후 트래픽 집중.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js">
+new Chart(document.getElementById('nanoRevenueChart'), {
+  type: 'bar',
+  data: {
+    labels: ['팔레트 삭스','라이트 삭스','반팔 파자마'],
+    datasets: [
+      { label: '오픈 첫날', data: [18900, 0, 682500], backgroundColor: '#6366f1', borderRadius: 4 },
+      { label: '오픈 1주', data: [132300, 56700, 1872700], backgroundColor: '#3b82f6', borderRadius: 4 },
+      { label: '오픈 4주', data: [959300, 687027, 0], backgroundColor: '#bfdbfe', borderRadius: 4 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => {
+          const label = ctx.dataset.label.replace(' / *3주','');
+          const suffix = (ctx.dataset.label.includes('4주') && ctx.dataIndex === 2) ? ' (3주차 집계)' : '';
+          return label + ': ' + ctx.raw.toLocaleString() + '원' + suffix;
+        }}}
+    },
+    scales: {
+      x: { ticks: { font: { size: 11 } }, grid: { display: false } },
+      y: { ticks: { callback: v => (v/10000).toFixed(0)+'만', font: { size: 11 } }, grid: { color: '#f0f0ec' } }
+    }
+  }
+});
+</script>
+<script>
+function showTab(id, btn) {
+  document.getElementById('tab-exp').style.display = id === 'exp' ? '' : 'none';
+  document.getElementById('tab-nano').style.display = id === 'nano' ? '' : 'none';
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+var shortLabels = ['중장비스니커즈','드로즈','파자마팬츠','컬러팜삭스','반팔파자마','라이트삭스','페이크삭스'];
+
+new Chart(document.getElementById('viewChart'), {
+  type: 'bar',
+  data: {
+    labels: shortLabels,
+    datasets: [{ label: '조회수', data: [34000,22000,14000,31000,18000,20000,19000],
+      backgroundColor: '#3b82f6', borderRadius: 5 }]
+  },
+  options: { responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { ticks: { callback: v => (v/10000).toFixed(0)+'만', font: { size: 11 } }, grid: { color: '#f0f0ec' } },
+      x: { ticks: { font: { size: 10 } }, grid: { display: false } }
+    }
+  }
+});
+
+new Chart(document.getElementById('engChart'), {
+  type: 'bar',
+  data: {
+    labels: shortLabels,
+    datasets: [
+      { label: '댓글', data: [509,292,207,560,276,61,316], backgroundColor: '#3b82f6', borderRadius: 3 },
+      { label: '저장', data: [95,53,38,119,90,22,53], backgroundColor: '#22c55e', borderRadius: 3 },
+      { label: '공유', data: [150,70,87,113,231,15,99], backgroundColor: '#f97316', borderRadius: 3 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { ticks: { font: { size: 10 } }, grid: { display: false } },
+      y: { ticks: { font: { size: 11 } }, grid: { color: '#f0f0ec' } }
+    }
+  }
+});
+
+new Chart(document.getElementById('revenueChart'), {
+  type: 'bar',
+  data: {
+    labels: ['중장비 스니커즈','드로즈 팬티','컬러팜 키즈프릴 삭스','올데이즈 파자마','실켓 삭스'],
+    datasets: [
+      { label: '오픈 첫날', data: [1454218,247282,1736820,682500,0], backgroundColor: '#6366f1', borderRadius: 4 },
+      { label: '오픈 1주', data: [3849380,1015840,5567892,1872700,56700], backgroundColor: '#3b82f6', borderRadius: 4 },
+      { label: '오픈 4주 / *3주', data: [11368548,2312693,11697677,0,198300],
+        backgroundColor: ['#bfdbfe','#bfdbfe','#fde68a','#bfdbfe','#bfdbfe'], borderRadius: 4 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ctx.dataset.label + ': ' + ctx.raw.toLocaleString() + '원' } }
+    },
+    scales: {
+      x: { ticks: { font: { size: 11 } }, grid: { display: false } },
+      y: { ticks: { callback: v => (v/10000).toFixed(0)+'만', font: { size: 11 } }, grid: { color: '#f0f0ec' } }
+    }
+  }
+});
+
+new Chart(document.getElementById('paidChart'), {
+  type: 'bar',
+  data: {
+    labels: ['팔레트 삭스','라이트 삭스','반팔 파자마'],
+    datasets: [
+      { label: '유가', data: [8,3,11], backgroundColor: '#6366f1', borderRadius: 4 },
+      { label: '무가', data: [15,7,50], backgroundColor: '#bfdbfe', borderRadius: 4 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { ticks: { font: { size: 11 } }, grid: { display: false } },
+      y: { ticks: { font: { size: 11 } }, grid: { color: '#f0f0ec' } }
+    }
+  }
+});
+
+new Chart(document.getElementById('costChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['팔레트 삭스\n128만원', '라이트 삭스\n45만원', '반팔 파자마\n165만원'],
+    datasets: [{ data: [1280000,450000,1650000],
+      backgroundColor: ['#6366f1','#22c55e','#f97316'], borderWidth: 0, hoverOffset: 6 }]
+  },
+  options: { responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { position: 'bottom', labels: { font: { size: 11 }, padding: 12, boxWidth: 12 } },
+      tooltip: { callbacks: { label: ctx => ctx.label.split('\n')[0] + ': ' + ctx.raw.toLocaleString() + '원' } }
+    }
+  }
+});
+
+new Chart(document.getElementById('cpcChart'), {
+  type: 'bar',
+  data: {
+    labels: ['u.ujin_home','dajeome','soonmoon_','heeyohaus','zooimood.kr','passi.kee','__home__i','_bomi.home','hey.greeny'],
+    datasets: [{ label: 'CPC (원)',
+      data: [695,1964,1514,1620,1043,1470,2992,4116,7357],
+      backgroundColor: [
+        '#22c55e','#f97316','#3b82f6','#3b82f6','#3b82f6',
+        '#f97316','#f97316','#ef4444','#ef4444'
+      ], borderRadius: 4 }]
+  },
+  options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => 'CPC: ' + ctx.raw.toLocaleString() + '원' } }
+    },
+    scales: {
+      x: { ticks: { callback: v => v.toLocaleString()+'원', font: { size: 10 } }, grid: { color: '#f0f0ec' } },
+      y: { ticks: { font: { size: 11 } }, grid: { display: false } }
+    }
+  }
+});
+</script>
+</body>
+</html><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+var nanoChartsReady = false;
+var insightChartsReady = false;
+
+function showTab(id, btn) {
+  document.getElementById('tab-exp').style.display = id === 'exp' ? '' : 'none';
+  document.getElementById('tab-nano').style.display = id === 'nano' ? '' : 'none';
+  document.getElementById('tab-insight').style.display = id === 'insight' ? '' : 'none';
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  if (id === 'nano' && !nanoChartsReady) {
+    nanoChartsReady = true;
+    initNanoCharts();
+  }
+  if (id === 'insight' && !insightChartsReady) {
+    insightChartsReady = true;
+    initInsightCharts();
+  }
+}
+
+// ── 체험단 차트 (페이지 로드 시 바로 렌더) ──────────────────
+var shortLabels = ['중장비스니커즈','드로즈','파자마팬츠','컬러팜삭스','반팔파자마','라이트삭스','페이크삭스'];
+
+new Chart(document.getElementById('viewChart'), {
+  type: 'bar',
+  data: {
+    labels: shortLabels,
+    datasets: [{ label: '조회수', data: [34000,22000,14000,31000,18000,20000,19000],
+      backgroundColor: '#3b82f6', borderRadius: 5 }]
+  },
+  options: { responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { ticks: { callback: v => (v/10000).toFixed(0)+'만', font: { size: 11 } }, grid: { color: '#f0f0ec' } },
+      x: { ticks: { font: { size: 10 } }, grid: { display: false } }
+    }
+  }
+});
+
+new Chart(document.getElementById('engChart'), {
+  type: 'bar',
+  data: {
+    labels: shortLabels,
+    datasets: [
+      { label: '댓글', data: [509,292,207,560,276,61,316], backgroundColor: '#3b82f6', borderRadius: 3 },
+      { label: '저장', data: [95,53,38,119,90,22,53], backgroundColor: '#22c55e', borderRadius: 3 },
+      { label: '공유', data: [150,70,87,113,231,15,99], backgroundColor: '#f97316', borderRadius: 3 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { ticks: { font: { size: 10 } }, grid: { display: false } },
+      y: { ticks: { font: { size: 11 } }, grid: { color: '#f0f0ec' } }
+    }
+  }
+});
+
+new Chart(document.getElementById('revenueChart'), {
+  type: 'bar',
+  data: {
+    labels: ['중장비 스니커즈','드로즈 팬티','컬러팜 키즈프릴 삭스','올데이즈 파자마','실켓 삭스'],
+    datasets: [
+      { label: '오픈 첫날', data: [1454218,247282,1736820,682500,0], backgroundColor: '#6366f1', borderRadius: 4 },
+      { label: '오픈 1주', data: [3849380,1015840,5567892,1872700,56700], backgroundColor: '#3b82f6', borderRadius: 4 },
+      { label: '오픈 4주 / *3주', data: [11368548,2312693,11697677,0,198300],
+        backgroundColor: ['#bfdbfe','#bfdbfe','#fde68a','#bfdbfe','#bfdbfe'], borderRadius: 4 }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ctx.dataset.label + ': ' + ctx.raw.toLocaleString() + '원' } }
+    },
+    scales: {
+      x: { ticks: { font: { size: 11 } }, grid: { display: false } },
+      y: { ticks: { callback: v => (v/10000).toFixed(0)+'만', font: { size: 11 } }, grid: { color: '#f0f0ec' } }
+    }
+  }
+});
+
+// ── 나노 차트 (탭 클릭 시 최초 1회 렌더) ──────────────────
+function initNanoCharts() {
+  new Chart(document.getElementById('paidChart'), {
+    type: 'bar',
+    data: {
+      labels: ['팔레트 삭스','라이트 삭스','반팔 파자마'],
+      datasets: [
+        { label: '유가', data: [8,3,11], backgroundColor: '#6366f1', borderRadius: 4 },
+        { label: '무가', data: [15,7,50], backgroundColor: '#bfdbfe', borderRadius: 4 }
+      ]
+    },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { font: { size: 11 } }, grid: { display: false } },
+        y: { ticks: { font: { size: 11 } }, grid: { color: '#f0f0ec' } }
+      }
+    }
+  });
+
+  new Chart(document.getElementById('costChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['팔레트 삭스 128만원', '라이트 삭스 45만원', '반팔 파자마 165만원'],
+      datasets: [{ data: [1280000,450000,1650000],
+        backgroundColor: ['#6366f1','#22c55e','#f97316'], borderWidth: 0, hoverOffset: 6 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { font: { size: 11 }, padding: 12, boxWidth: 12 } },
+        tooltip: { callbacks: { label: ctx => ctx.label.split(' ')[0] + ' ' + ctx.label.split(' ')[1] + ': ' + ctx.raw.toLocaleString() + '원' } }
+      }
+    }
+  });
+
+  new Chart(document.getElementById('cpcChart'), {
+    type: 'bar',
+    data: {
+      labels: ['u.ujin_home','dajeome','soonmoon_','heeyohaus','zooimood.kr','passi.kee','__home__i','_bomi.home','hey.greeny'],
+      datasets: [{ label: 'CPC (원)',
+        data: [695,1964,1514,1620,1043,1470,2992,4116,7357],
+        backgroundColor: ['#22c55e','#f97316','#3b82f6','#3b82f6','#3b82f6','#f97316','#f97316','#ef4444','#ef4444'],
+        borderRadius: 4 }]
+    },
+    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => 'CPC: ' + ctx.raw.toLocaleString() + '원' } }
+      },
+      scales: {
+        x: { ticks: { callback: v => v.toLocaleString()+'원', font: { size: 10 } }, grid: { color: '#f0f0ec' } },
+        y: { ticks: { font: { size: 11 } }, grid: { display: false } }
+      }
+    }
+  });
+}
+
+function initInsightCharts() {
+  const insightLabels = ['중장비\n스니커즈','드로즈\n팬티','원마일\n파자마','컬러팜\n삭스','반팔\n파자마','라이트\n삭스','페이크삭스\n두들링'];
+
+  const silketDays = ['5/1','5/2','5/3','5/4','5/5','5/6','5/7','5/8','5/9','5/10','5/11','5/12','5/13','5/14','5/15','5/16','5/17','5/18','5/19','5/20','5/21','5/22','5/23','5/24','5/25','5/26'];
+  const silketSales = [16500,0,0,0,0,16500,0,0,0,0,0,0,165000,33000,37800,0,56700,33600,50400,151200,109200,151200,170100,56700,86100,33600];
+  const silketColors = silketDays.map((d,i) => {
+    if (i >= 12 && i <= 19) return '#6366f1';
+    if (i >= 17) return '#22c55e';
+    return '#d1d5db';
+  });
+
+  new Chart(document.getElementById('silketChart'), {
+    type: 'bar',
+    data: {
+      labels: silketDays,
+      datasets: [{
+        label: '일별 매출(원)',
+        data: silketSales,
+        backgroundColor: silketColors,
+        borderRadius: 3
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ctx.raw.toLocaleString() + '원' } }
+      },
+      scales: {
+        x: { ticks: { font: { size: 10 } }, grid: { display: false } },
+        y: { ticks: { callback: v => (v/10000).toFixed(0)+'만', font: { size: 11 } }, grid: { color: '#f0f0ec' } }
+      }
+    }
+  });
+
+  // 범례
+  const legendEl = document.createElement('div');
+  legendEl.style.cssText = 'display:flex;gap:14px;font-size:11px;color:#6b6b67;margin-top:8px;';
+  legendEl.innerHTML = '<span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#d1d5db;display:inline-block;"></span>이벤트 전</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#6366f1;display:inline-block;"></span>좋아요 이벤트(5/13~5/20)</span><span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#22c55e;display:inline-block;"></span>플랫폼 이벤트 구좌(5/18~)</span>';
+  document.getElementById('silketChart').parentNode.appendChild(legendEl);
+
+  new Chart(document.getElementById('landingChart'), {
+    type: 'bar',
+    data: {
+      labels: ['중장비 스니커즈','컬러팜 키즈프릴 삭스','드로즈 팬티','올데이즈 반팔파자마','실켓 라이트삭스'],
+      datasets: [
+        { label: '1주차 매출', data: [3849380, 5567892, 1015840, 1872700, 56700],
+          backgroundColor: ['#6366f1','#6366f1','#6366f1','#f97316','#f97316'], borderRadius: 5 }
+      ]
+    },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => '1주차 매출: ' + ctx.raw.toLocaleString() + '원' } }
+      },
+      scales: {
+        x: { ticks: { font: { size: 11 } }, grid: { display: false } },
+        y: { ticks: { callback: v => (v/10000).toFixed(0)+'만', font: { size: 11 } }, grid: { color: '#f0f0ec' } }
+      }
+    }
+  });
+
+  new Chart(document.getElementById('cpfChart'), {
+    type: 'bar',
+    data: {
+      labels: insightLabels,
+      datasets: [{ label: '팔로워 1명당 광고비(원)',
+        data: [860, 1162, 1701, 745, 738, 8698, 1034],
+        backgroundColor: ['#3b82f6','#3b82f6','#f97316','#22c55e','#22c55e','#ef4444','#3b82f6'],
+        borderRadius: 4 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false },
+        tooltip: { callbacks: { label: ctx => '팔로워 1명당: ' + ctx.raw.toLocaleString() + '원' } }
+      },
+      scales: {
+        x: { ticks: { font: { size: 10 } }, grid: { display: false } },
+        y: { ticks: { callback: v => v.toLocaleString()+'원', font: { size: 11 } }, grid: { color: '#f0f0ec' } }
+      }
+    }
+  });
+
+  new Chart(document.getElementById('fcrChart'), {
+    type: 'bar',
+    data: {
+      labels: insightLabels,
+      datasets: [{ label: '유입→팔로워 전환율(%)',
+        data: [19.2, 20.5, 17.5, 16.9, 32.4, 1.5, 17.4],
+        backgroundColor: ['#3b82f6','#3b82f6','#3b82f6','#22c55e','#22c55e','#ef4444','#3b82f6'],
+        borderRadius: 4 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false },
+        tooltip: { callbacks: { label: ctx => '전환율: ' + ctx.raw + '%' } }
+      },
+      scales: {
+        x: { ticks: { font: { size: 10 } }, grid: { display: false } },
+        y: { ticks: { callback: v => v+'%', font: { size: 11 } }, grid: { color: '#f0f0ec' } }
+      }
+    }
+  });
+}
+</script>
+</body>
+</html>
